@@ -39,6 +39,10 @@ body.dark-mode {
   align-items: center;
   transition: background 0.3s;
 }
+body {
+  font-family: 'Playfair Display', serif;
+}
+
 
 .navbar .logo {
   font-size: 1.8rem;

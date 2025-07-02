@@ -161,8 +161,6 @@ body.dark-mode {
 .about-video {
   flex: 1;
 }
-
-.about-video video,
 .about-video iframe {
   border-radius: 10px;
   width: 100%;

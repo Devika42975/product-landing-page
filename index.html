@@ -2,80 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Awesome Product</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rolex Watch - Product Landing Page</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <img src="images/logo.png" alt="Logo" class="logo" />
-    <nav>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Rolex</h1>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Revolutionize Your Workflow</h1>
-      <p>Discover how our product boosts your productivity and simplifies your tasks.</p>
-      <a href="#pricing" class="cta-button">Get Started</a>
+    <div class="hero-content">
+      <h2>Experience Timeless Luxury</h2>
+      <p>Discover the unmatched elegance and craftsmanship of the Rolex watch collection.</p>
+      <a href="#contact" class="btn">Explore Now</a>
     </div>
-    <div class="hero-img">
-      <img src="images/product.jpg" alt="Product" style="max-width: 400px; width: 100%;" />
+    <div class="hero-image">
+      <img src="images/product.JPG" alt="Rolex Watch">
     </div>
   </section>
 
+  <!-- Features Section -->
   <section id="features" class="features">
-    <h2>Why Choose Us?</h2>
+    <h2>Key Features of Rolex</h2>
     <div class="feature-columns">
       <div class="feature-box">
-        <h3>Fast</h3>
-        <p>Quick performance that saves your time.</p>
+        <h3>Swiss Precision</h3>
+        <p>Certified chronometers with outstanding timekeeping accuracy.</p>
       </div>
       <div class="feature-box">
-        <h3>Secure</h3>
-        <p>Top-notch security to protect your data.</p>
+        <h3>Iconic Craftsmanship</h3>
+        <p>Handcrafted design made with the finest materials.</p>
       </div>
       <div class="feature-box">
-        <h3>User-Friendly</h3>
-        <p>Simple interface that anyone can use.</p>
+        <h3>Ultimate Durability</h3>
+        <p>Waterproof Oyster case with long-lasting performance.</p>
       </div>
     </div>
   </section>
 
-  <section id="pricing" class="pricing">
-    <h2>Pricing</h2>
-    <div class="pricing-columns">
-      <div class="price-card">
-        <h3>Basic</h3>
-        <p>₹0 / month</p>
-        <p>Limited features</p>
-      </div>
-      <div class="price-card featured">
-        <h3>Pro</h3>
-        <p>₹499 / month</p>
-        <p>All features + priority support</p>
-      </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Rolex</h2>
+      <p>Rolex has defined excellence in watchmaking since 1905. Each watch is a symbol of prestige and innovation, designed to last generations.</p>
+    </div>
+    <div class="about-video">
+      <video width="400" controls>
+        <source src="vedios/watches vedio.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Awesome Product. All rights reserved.</p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rolex. All rights reserved.</p>
   </footer>
+
+  <button onclick="toggleDarkMode()" style="position:fixed;top:1rem;right:1rem;padding:0.5rem 1rem;z-index:1000;">Toggle Theme</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
 </body>
 </html>

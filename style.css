@@ -1,368 +1,105 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rolex Watch - Product Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* COLOR VARIABLES */
-:root {
-  --primary: #006400; /* Rolex Dark Green */
-  --primary-dark: #004d00;
-  --gold: #d4af37;
-  --bg-light: #f8f9fa;
-  --bg-gray: #e9ecef;
-  --text-dark: #111;
-  --text-light: #fff;
-  --accent: #d4af37;
-}
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Rolex</h1>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* DARK MODE (optional) */
-body.dark-mode {
-  --primary: #228B22;
-  --bg-light: #1c1c1c;
-  --bg-gray: #2a2a2a;
-  --text-dark: #f1f1f1;
-  --text-light: #f1f1f1;
-  --accent: #ffd700;
-  background-color: var(--bg-light);
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Experience Timeless Luxury</h2>
+      <p>Discover the unmatched elegance and craftsmanship of the Rolex watch collection.</p>
+      <a href="#contact" class="btn cta-btn">Buy Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="product.JPG" alt="Rolex Watch">
+    </div>
+  </section>
 
-/* Navbar */
-.navbar {
-  background: var(--text-dark);
-  color: var(--text-light);
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  align-items: center;
-  transition: background 0.3s;
-}
-body {
-  font-family: 'Playfair Display', serif;
-}
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Key Features of Rolex</h2>
+    <div class="feature-columns">
+      <div class="feature-box">
+        <h3>Swiss Precision</h3>
+        <p>Certified chronometers with outstanding timekeeping accuracy.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Iconic Craftsmanship</h3>
+        <p>Handcrafted design made with the finest materials.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Ultimate Durability</h3>
+        <p>Waterproof Oyster case with long-lasting performance.</p>
+      </div>
+    </div>
+    <a href="#contact" class="btn cta-btn">Get Yours Now</a>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Rolex</h2>
+      <p>Rolex has defined excellence in watchmaking since 1905. Each watch is a symbol of prestige and innovation, designed to last generations.</p>
+      <a href="#contact" class="btn cta-btn">Book Your Rolex</a>
+    </div>
+    <div class="about-video">
+      <video width="400" controls>
+        <source src="watches vedio.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
 
-.navbar .logo {
-  font-size: 1.8rem;
-  color: var(--accent);
-  font-weight: bold;
-}
+  <!-- Call to Action Banner -->
+  <section class="cta-banner">
+    <h2>Own the Luxury</h2>
+    <p>Make your statement with a Rolex. Timeless, Prestigious, Yours.</p>
+    <a href="#contact" class="btn cta-btn">Order Now</a>
+  </section>
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
-.navbar .nav-links li a {
-  color: var(--text-light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rolex. All rights reserved.</p>
+  </footer>
 
-.navbar .nav-links li a:hover {
-  color: var(--accent);
-}
+  <!-- Theme Toggle -->
+  <button onclick="toggleDarkMode()" style="position:fixed;top:1rem;right:1rem;padding:0.5rem 1rem;z-index:1000;">Toggle Theme</button>
 
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, var(--bg-light), #dee2e6);
-  animation: fadeIn 1s ease-in-out;
-}
+  <!-- Dark Mode Script -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 
-.hero-content {
-  max-width: 50%;
-}
-
-.hero h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-dark);
-}
-
-.hero .btn {
-  padding: 0.7rem 1.5rem;
-  background: var(--primary);
-  color: white;
-  border: none;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.hero .btn:hover {
-  background: var(--primary-dark);
-}
-
-.hero-image img {
-  width: 400px;
-  border-radius: 10px;
-  animation: slideIn 1s ease-out;
-}
-
-/* Features Section */
-.features {
-  padding: 2rem;
-  background: var(--bg-light);
-  text-align: center;
-}
-
-.features h2 {
-  margin-bottom: 2rem;
-  color: var(--primary);
-}
-
-.feature-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.feature-box {
-  flex: 1;
-  background: var(--bg-gray);
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-top: 5px solid var(--accent);
-}
-
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* About Section */
-.about {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  background: var(--bg-gray);
-}
-
-.about-text {
-  flex: 1;
-  color: var(--text-dark);
-}
-
-.about h2 {
-  color: var(--primary);
-}
-
-.about-video {
-  flex: 1;
-}
-
-.about-video video,
-.about-video iframe {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Contact Section */
-.contact {
-  padding: 2rem;
-  background: var(--bg-light);
-  text-align: center;
-}
-
-.contact h2 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact input,
-.contact textarea {
-  padding: 0.8rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact .btn {
-  background: var(--primary);
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact .btn:hover {
-  background: var(--primary-dark);
-}
-
-/* Footer */
-footer {
-  background: var(--text-dark);
-  color: var(--text-light);
-  text-align: center;
-  padding: 1rem;
-  transition: background 0.3s;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(100px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content, .hero-image {
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .feature-columns {
-    flex-direction: column;
-  }
-
-  .feature-box {
-    margin-bottom: 1rem;
-  }
-
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-video video {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .contact form {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .navbar .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-/* ------------------------ */
-/* 📱 Mobile Responsive Fix */
-/* ------------------------ */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content, .hero-image {
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero .btn {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    display: inline-block;
-    white-space: nowrap;
-  }
-
-  .feature-columns {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .feature-box {
-    width: 100%;
-  }
-
-  .about {
-    flex-direction: column;
-  }
-
-  .about-video video {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .contact form {
-    padding: 1rem;
-    width: 100%;
-  }
-}
-
+</body>
+</html>
